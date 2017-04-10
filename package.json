@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/jinpyojeon/protest-tweet/issues"
   },
-  "homepage": "https://github.com/jinpyojeon/protest-tweet#readme"
+  "homepage": "https://github.com/jinpyojeon/protest-tweet#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "sentiment": "^4.0.0",
+    "sentiment-spanish": "0.0.8",
+    "twitter": "^1.7.0"
+  }
 }
