@@ -1,14 +1,18 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var http = require('http');
+var socketIO = require('socket.io')(http); 
+
+var server = http.createServer(app);
 
 var twitter_analysis = require('./js/twitter_analysis.js');
 
 app.use('/js', express.static(path.join(__dirname, 'js')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req,res) {
-	// res.sendFile(path.join(__dirname + '/index.html'));
-	res.render('index.html', { sentiment_data : sentiment_data });
+	res.render('index.html');
 });
 
-app.listen(8080); 
+server.listen(8080); 
